@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2CCDB96B-6A9B-4120-89A4-E2D96FD6699C}</ProjectGuid>
+    <RootNamespace>jlmath</RootNamespace>
+    <ProjectName>jlmath</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+    <CLRSupport>false</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>include\;</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_UNICODE;UNICODE;%(PreprocessorDefinitions);_DEBUG;SB_SIMD_ENABLED=1;</PreprocessorDefinitions>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>include\;</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>JL_SIMD_ENABLED=1;</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="include\math\jlMath.h" />
+    <ClInclude Include="include\math\jlMatrix4.h" />
+    <ClInclude Include="include\math\jlQuaternion.h" />
+    <ClInclude Include="include\math\jlSimdFloat.h" />
+    <ClInclude Include="include\math\jlVector2.h" />
+    <ClInclude Include="include\math\jlVector4.h" />
+    <ClInclude Include="include\math\jlComp.h" />
+    <ClInclude Include="include\jlCore.h" />
+    <ClInclude Include="include\util\jlMemory.h" />
+    <ClInclude Include="include\util\jlRandom.h" />
+    <ClInclude Include="include\util\jlTypes.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="include\math\jlMath.inl" />
+    <None Include="include\math\jlMathFPU.inl" />
+    <None Include="include\math\jlMathSSE.inl" />
+    <None Include="include\math\jlMatrix4.inl" />
+    <None Include="include\math\jlQuaternion.inl" />
+    <None Include="include\math\jlSimdFloatFPU.inl" />
+    <None Include="include\math\jlSimdFloatSSE.inl" />
+    <None Include="include\math\jlVector2.inl" />
+    <None Include="include\math\jlCompFPU.inl" />
+    <None Include="include\math\jlCompSSE.inl" />
+    <None Include="include\math\jlVector4FPU.inl" />
+    <None Include="include\math\jlVector4SSE.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\jlmath_test.cpp" />
+    <ClCompile Include="source\math\jlMath.cpp" />
+    <ClCompile Include="source\math\jlMatrix4.cpp" />
+    <ClCompile Include="source\math\jlQuaternion.cpp" />
+    <ClCompile Include="source\math\jlVector2.cpp" />
+    <ClCompile Include="source\math\jlVector4.cpp" />
+    <ClCompile Include="source\jlCore.cpp" />
+    <ClCompile Include="source\util\jlMemory.cpp" />
+    <ClCompile Include="source\util\jlRandom.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,44 @@
+﻿Build started 5/20/2012 4:36:31 PM.
+     1>Project "C:\Users\Loko\Documents\Code\C++\jlmath\jlmath\jlmath.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\jlmath.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Iinclude\ /Zi /nologo /W3 /WX- /MP /Od /Oy- /D _UNICODE /D UNICODE /D _DEBUG /D SB_SIMD_ENABLED=1 /Gm- /EHsc /MD /GS /Gy /arch:SSE2 /fp:fast /fp:except- /Zc:wchar_t /Zc:forScope /GR- /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt source\jlmath_test.cpp
+         jlmath_test.cpp
+     1>source\jlmath_test.cpp(184): warning C4227: anachronism used : qualifiers on reference are ignored
+     1>source\jlmath_test.cpp(184): warning C4227: anachronism used : qualifiers on reference are ignored
+     1>source\jlmath_test.cpp(184): warning C4227: anachronism used : qualifiers on reference are ignored
+     1>source\jlmath_test.cpp(212): warning C4227: anachronism used : qualifiers on reference are ignored
+     1>source\jlmath_test.cpp(212): warning C4227: anachronism used : qualifiers on reference are ignored
+     1>source\jlmath_test.cpp(212): warning C4227: anachronism used : qualifiers on reference are ignored
+     1>source\jlmath_test.cpp(213): warning C4227: anachronism used : qualifiers on reference are ignored
+     1>source\jlmath_test.cpp(213): warning C4227: anachronism used : qualifiers on reference are ignored
+     1>source\jlmath_test.cpp(213): warning C4227: anachronism used : qualifiers on reference are ignored
+     1>source\jlmath_test.cpp(213): warning C4227: anachronism used : qualifiers on reference are ignored
+     1>source\jlmath_test.cpp(214): warning C4227: anachronism used : qualifiers on reference are ignored
+     1>source\jlmath_test.cpp(214): warning C4227: anachronism used : qualifiers on reference are ignored
+     1>source\jlmath_test.cpp(214): warning C4227: anachronism used : qualifiers on reference are ignored
+     1>source\jlmath_test.cpp(214): warning C4227: anachronism used : qualifiers on reference are ignored
+     1>source\jlmath_test.cpp(215): warning C4227: anachronism used : qualifiers on reference are ignored
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Loko\Documents\Code\C++\jlmath\Debug\jlmath.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\jlmath.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Loko\Documents\Code\C++\jlmath\Debug\jlmath.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Loko\Documents\Code\C++\jlmath\Debug\jlmath.lib" /MACHINE:X86 Debug\jlmath_test.obj
+         Debug\sbMath.obj
+         Debug\sbMatrix4.obj
+         Debug\sbQuaternion.obj
+         Debug\sbVector2.obj
+         Debug\sbVector4.obj
+         Debug\sbCore.obj
+         Debug\sbMemory.obj
+         Debug\sbRandom.obj
+         LINK : C:\Users\Loko\Documents\Code\C++\jlmath\Debug\jlmath.exe not found or not built by the last incremental link; performing full link
+         jlmath.vcxproj -> C:\Users\Loko\Documents\Code\C++\jlmath\Debug\jlmath.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Loko\Documents\Code\C++\jlmath\Debug\jlmath.exe;#1" /manifest Debug\jlmath.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Debug\jlmath.unsuccessfulbuild".
+         Touching "Debug\jlmath.lastbuildstate".
+     1>Done Building Project "C:\Users\Loko\Documents\Code\C++\jlmath\jlmath\jlmath.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.04

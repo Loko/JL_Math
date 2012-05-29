@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+ <rdmgr>
+  <timestamp type="u64_t">1336947711</timestamp>
+  <hostname>Loko-PC</hostname>
+  <os>windows</os>
+  <product>Intel® VTune™ Amplifier XE 2011 Update 7</product>
+  <buildNumber type="s32_t">206420</buildNumber>
+ </rdmgr>
+ <All_Configurations-All_Platforms>
+  <searchDirs>
+   <searchCategory>
+    <category type="u8_t">3</category>
+    <searchDirectory>
+     <name>c:\users\loko\documents\code\c++\jlmath\jlmath\source</name>
+     <recursive type="bool">false</recursive>
+     <priority type="bool">false</priority>
+    </searchDirectory>
+   </searchCategory>
+  </searchDirs>
+  <analysis_type_settings>
+   <selected_analysis_type_path>C:\Program Files (x86)\Intel\VTune Amplifier XE 2011\config\analysis_type\hotspots.cfg</selected_analysis_type_path>
+  </analysis_type_settings>
+ </All_Configurations-All_Platforms>
+</root>
