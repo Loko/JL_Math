@@ -392,18 +392,9 @@ JL_FORCE_INLINE jlVector2 jlMatrix4::transformPosition(const jlVector2& vec) con
 }
 
 JL_FORCE_INLINE jlVector4 jlMatrix4::transformDirection(const jlVector4& vec) const {
-	jlVector4 xform;
-	jlVector4 tmp;
-	jlVector4 r0, r1, r2, r3;
-	r0.setReplication<0>(vec);
-	r1.setReplication<1>(vec);
-	r2.setReplication<2>(vec);
-	xform.setMul(r0, col0);
-	tmp.setMul(r1, col1);
-	xform.add(tmp);
-	tmp.setMul(r2, col2);
-	xform.add(tmp);
-	return xform;
+	jlMatrix4 inv = inverse();
+	jlMatrix4 invTranspose = inv.getTranspose();
+	return invTranspose.transform(vec);
 }
 
 JL_FORCE_INLINE jlVector2 jlMatrix4::transformDirection(const jlVector2& vec) const {

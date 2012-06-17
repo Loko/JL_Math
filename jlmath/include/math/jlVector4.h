@@ -40,6 +40,7 @@ public:
 	void setAll(const jlSimdFloat& v);
 	void setZero3();
 	void setZero4();
+	void splice(const jlCompMask& mask);
 
 	// operators
 	jlVector4 operator +(const jlVector4& rhs) const;

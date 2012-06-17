@@ -178,6 +178,13 @@ JL_FORCE_INLINE void jlVector4::setZero4() {
 	quad.v[3] = 0.0f;
 }
 
+JL_FORCE_INLINE void jlVector4::splice(const jlCompMask& mask) {
+	quad.v[0] = (mask & jlComp::MASK_X) ? quad.v[0] : 0.0f;
+	quad.v[1] = (mask & jlComp::MASK_Y) ? quad.v[1] : 0.0f;
+	quad.v[2] = (mask & jlComp::MASK_Z) ? quad.v[2] : 0.0f;
+	quad.v[3] = (mask & jlComp::MASK_W) ? quad.v[3] : 0.0f;
+}
+
 JL_FORCE_INLINE jlVector4 jlVector4::operator +(const jlVector4& rhs) const {
 	jlVector4 sum;
 	sum.quad.v[0] = quad.v[0] + rhs.quad.v[0];

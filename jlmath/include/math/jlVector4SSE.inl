@@ -149,6 +149,10 @@ JL_FORCE_INLINE void jlVector4::setZero4() {
 	quad = _mm_setzero_ps();	
 }
 
+JL_FORCE_INLINE void jlVector4::splice(const jlCompMask& mask) {
+	quad = _mm_and_ps(quad, mask);
+}
+
 JL_FORCE_INLINE bool32 jlVector4::isZero3() const {
 	int32 maskXYZ = 7;
 	return _mm_movemask_ps(_mm_cmpeq_ps(quad, QUAD_ZERO)) & maskXYZ; 
